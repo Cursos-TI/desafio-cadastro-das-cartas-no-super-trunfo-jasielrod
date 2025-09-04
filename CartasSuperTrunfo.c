@@ -2,13 +2,13 @@
 
 int main() {
     // Declaração das variáveis para a Carta 1
-    char estado1;
-    char cod1[4];
-    char cidade1[50];
-    int pop1;
-    float area1;
-    float pib1;
-    int ptur1;
+    char estado1; //variável para receber estado representando com uma letra de (A-H)
+    char cod1[4]; // variável com array para receber código (EX: A01) até 4 caracteres
+    char cidade1[50]; // variável com array para receber cidade com até 50 caracteres
+    int pop1; // variável tipo inteiro para receber o número de população
+    float area1; // variável tipo flutuante para receber a área em formato Km²
+    float pib1; // variável tipo flutuante para receber o valor do Produto Interno Bruto da cidade em valor de moeda real
+    int ptur1; // variável tipo inteiro para receber o número de pontos turísticos
 
     // Declaração das variáveis para a Carta 2
     char estado2;
@@ -22,24 +22,24 @@ int main() {
     // Título feito com caracteres da tabela ASCII para melhor vizualização e destaque.
     printf("      ╔═══════════════════════════════╗\n");
     printf("      ║  DESAFIO SUPER TRUNFO PAÍSES  ║\n");
-    printf("      ╚═══════════════════════════════╝\n \n");
+    printf("      ╚═══════════════════════════════╝\n \n"); // pulando duas linhas
 
     // Entrada de dados para a Carta 1
-    printf("Insira os dados da Carta 1:\n");
-    printf("Estado (A-H): ");
-    scanf(" %c", &estado1);
-    printf("Código da Carta (ex: A01): ");
-    scanf("%s", cod1);
-    printf("Nome da Cidade: ");
-    scanf("%s", cidade1); 
-    printf("População: ");
-    scanf("%d", &pop1);
-    printf("Área (em km²): ");
-    scanf("%f", &area1);
-    printf("PIB (em bilhões de reais): ");
-    scanf("%f", &pib1);
-    printf("Número de Pontos Turísticos: ");
-    scanf("%d", &ptur1);
+    printf("Insira os dados da Carta 1:\n"); // exibindo mensagem solicitando a inclusão de dados
+    printf("Estado (A-H): "); // exibindo mensagem solicitando a inclusão de dados 
+    scanf(" %c", &estado1); // recebendo os dados para estado
+    printf("Código da Carta (ex: A01): "); // exibindo mensagem solicitando a inclusão de dados codigo da carta
+    scanf("%s", cod1); // recebendo os dados para Código e armazenando na variável cod1
+    printf("Nome da Cidade: "); // exibindo mensagem solicitando a inclusão de dados Cidade
+    scanf("%s", cidade1);  // recebendo os dados para Cidade e armazenando na variável cidade1
+    printf("População: "); // exibindo mensagem solicitando a inclusão de dados População
+    scanf("%d", &pop1); // recebendo os dados para População e armazenando na variável pop1
+    printf("Área (em km²): "); // exibindo mensagem solicitando a inclusão de dados Area
+    scanf("%f", &area1); // recebendo os dados para area e armazenando na variável area1
+    printf("PIB (em bilhões de reais): "); // exibindo mensagem solicitando a inclusão de dados PIB
+    scanf("%f", &pib1); // recebendo os dados para PIP e armazenando na variável pib1
+    printf("Número de Pontos Turísticos: ");  // exibindo mensagem solicitando a inclusão de dados Pontos Turísticos
+    scanf("%d", &ptur1); // recebendo os dados para Pontos Tur. e armazenando na variável ptur1
 
     // Exibindo a mensagem de confirmação 
     printf("╔═══════════════════════════════════════╗\n");
