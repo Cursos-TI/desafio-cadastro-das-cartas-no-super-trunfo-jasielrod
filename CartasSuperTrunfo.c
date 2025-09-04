@@ -31,7 +31,7 @@ int main() {
     printf("Código da Carta (ex: A01): ");
     scanf("%s", cod1);
     printf("Nome da Cidade: ");
-    scanf("%s", &cidade1); 
+    scanf("%s", cidade1); 
     printf("População: ");
     scanf("%d", &pop1);
     printf("Área (em km²): ");
@@ -53,7 +53,7 @@ int main() {
     printf("Código da Carta (ex: B02): ");
     scanf("%s", cod2);
     printf("Nome da Cidade: ");
-    scanf("%s", &cidade2); 
+    scanf("%s", cidade2); 
     printf("População: ");
     scanf("%d", &pop2);
     printf("Área (em km²): ");
