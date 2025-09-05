@@ -1,23 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    // Declaração das variáveis para a Carta 1
-    char estado1; //variável para receber estado representando com uma letra de (A-H)
-    char cod1[4]; // variável com array para receber código (EX: A01) até 4 caracteres
-    char cidade1[50]; // variável com array para receber cidade com até 50 caracteres
-    int pop1; // variável tipo inteiro para receber o número de população
-    float area1; // variável tipo flutuante para receber a área em formato Km²
-    float pib1; // variável tipo flutuante para receber o valor do Produto Interno Bruto da cidade em valor de moeda real
-    int ptur1; // variável tipo inteiro para receber o número de pontos turísticos
+    // Declaração das variáveis 
+    char estado1, estado2; //variável para receber estado representando com uma letra de (A-H)
+    char cod1[4], cod2[4]; // variável com array para receber código (EX: A01) até 4 caracteres
+    char cidade1[50], cidade2[50]; // variável com array para receber cidade com até 50 caracteres
+    int pop1, pop2; // variável tipo inteiro para receber o número de população
+    float area1, area2, pib1, pib2, densipop1, densipop2, pibpcapita1, pibpcapita2; // variável tipo flutuante para receber a área em formato Km², Pib, Densidade Populacional e Pip p Capta
+    int ptur1, ptur2; // variável tipo inteiro para receber o número de pontos turísticos
 
-    // Declaração das variáveis para a Carta 2
-    char estado2;
-    char cod2[4];
-    char cidade2[50];
-    int pop2;
-    float area2;
-    float pib2;
-    int ptur2;
 
     // Título feito com caracteres da tabela ASCII para melhor vizualização e destaque.
     printf("      ╔═══════════════════════════════╗\n");
@@ -63,6 +54,11 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &ptur2);
 
+    densipop1 = (float) pop1 / area1; // Calculo da Densidade Populacional da Carta 1 : população da cidade dividida pela área
+    densipop2 = (float) pop2 / area2; // Calculo da Densidade Populacional da Carta 2 : população da cidade dividida pela área
+    pibpcapita1 = (float) pib1 / pop1; // calculo do PIP PER CAPITA da Carta 1: PIB da cidade dividido pela população
+    pibpcapita2 = (float) pib2 / pop2; // calculo do PIP PER CAPITA da Carta 2: PIB da cidade dividido pela população
+
     // Exibindo a mensagem de confirmação 
     printf("╔═══════════════════════════════════════╗\n");
     printf("║ A CARTA FOI CADASTRADA COM SUCESSO!!  ║\n");
@@ -73,29 +69,33 @@ int main() {
     printf("      ╚════════════════════════════════╝\n \n");
 
        // Exibindo as cartas na tabela feita com caracteres ASCII para melhor vizualização
-        printf("╔═════════════════════════════════════╗\n");
-        printf("║▒▒▒▒▒▒▒▒▒▒▒▒▒▒ CARTA 1 ▒▒▒▒▒▒▒▒▒▒▒▒▒ ║\n");  
-        printf("╠═════════════════════════════════════╣\n");              
-        printf("║ ■ ESTADO:    %c                      ║\n", estado1);  
-        printf("║ ■ CÓDIGO:    %s                    ║\n", cod1);  
-        printf("║ ■ CIDADE:    %s              \n", cidade1);  
-        printf("║ ■ POPULAÇÃO: %d              \n", pop1);  
-        printf("║ ■ ÁREA:      %.2f Km²        \n", area1);  
-        printf("║ ■ PIB:       %.2f Bilhões    \n", pib1);
-        printf("║ ■ PONTOS T.: %d                      ║\n", ptur1);
-        printf("╚═════════════════════════════════════╝\n \n \n");  
+        printf("╔═══════════════════════════════════════════════════╗\n");
+        printf("║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ CARTA 1 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ║\n");  
+        printf("╠═══════════════════════════════════════════════════╣\n");              
+        printf("║ ■ ESTADO:                 %c                       ║\n", estado1);  
+        printf("║ ■ CÓDIGO:                 %s                     ║\n", cod1);  
+        printf("║ ■ CIDADE:                 %s              \n", cidade1);  
+        printf("║ ■ POPULAÇÃO:              %d              \n", pop1);  
+        printf("║ ■ ÁREA:                   %.2f Km²        \n", area1);  
+        printf("║ ■ PIB:                    %.2f Bilhões    \n", pib1);
+        printf("║ ■ PONTOS TURISTICOS:      %d                      ║\n", ptur1);
+        printf("║ ■ DENSIDADE POPULACIONAL: %.2f  hab/km²           ║\n", densipop1);
+        printf("║ ■ PIB PER CAPITA:         %.2f  Reais             ║\n", pibpcapita1);
+        printf("╚═══════════════════════════════════════════════════╝\n \n \n");  
 
-        printf("╔════════════════════════════════════╗\n");
-        printf("║▒▒▒▒▒▒▒▒▒▒▒▒▒▒ CARTA 2 ▒▒▒▒▒▒▒▒▒▒▒▒ ║\n");  
-        printf("╠════════════════════════════════════╣\n");              
-        printf("║ ■ ESTADO:    %c                     ║\n", estado2);  
-        printf("║ ■ CÓDIGO:    %s                   ║\n", cod2);  
-        printf("║ ■ CIDADE:    %s               \n", cidade2);  
-        printf("║ ■ POPULAÇÃO: %d               \n", pop2);  
-        printf("║ ■ ÁREA:      %.2f Km²         \n", area2);  
-        printf("║ ■ PIB:       %.2f Bilhões     \n", pib2);
-        printf("║ ■ PONTOS T.: %d                     ║\n", ptur2);
-        printf("╚════════════════════════════════════╝\n \n \n");  
+        printf("╔═══════════════════════════════════════════════════╗\n");
+        printf("║▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ CARTA 2 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ║\n");  
+        printf("╠═══════════════════════════════════════════════════╣\n");              
+        printf("║ ■ ESTADO:                 %c                       ║\n", estado2);  
+        printf("║ ■ CÓDIGO:                 %s                     ║\n", cod2);  
+        printf("║ ■ CIDADE:                 %s              \n", cidade2);  
+        printf("║ ■ POPULAÇÃO:              %d              \n", pop2);  
+        printf("║ ■ ÁREA:                   %.2f Km²        \n", area2);  
+        printf("║ ■ PIB:                    %.2f Bilhões    \n", pib2);
+        printf("║ ■ PONTOS TURISTICOS:      %d                      ║\n", ptur2);
+        printf("║ ■ DENSIDADE POPULACIONAL: %.2f  hab/km²           ║\n", densipop2);
+        printf("║ ■ PIB PER CAPITA:         %.2f  Reais             ║\n", pibpcapita2);
+        printf("╚═══════════════════════════════════════════════════╝\n \n \n");  
    
     return 0;
 }
